@@ -51,7 +51,7 @@ function showContent(e) {
 
 //Adding a listener that is working when someone click the button
 
-button.addEventListener('mouseout', showContent);
+//button.addEventListener('mouseout', showContent);
 
-//button.addEventListener('click', showContent );
+button.addEventListener('click', showContent );
 
