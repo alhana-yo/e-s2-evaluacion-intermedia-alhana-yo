@@ -49,6 +49,10 @@ body {
   
 }
 
+.italic-text {
+  font-style: italic;
+}
+
 .attemps {
 
   position: absolute;
