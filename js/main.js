@@ -33,7 +33,7 @@ function showContent(e) {
 
     //Comparing the user's number and the random number
 
-    if (content === randomNumber) { //the numbers are equals
+    if (parseInt(content) === randomNumber) { //the numbers are equals
         console.log('has acertado el número!!!');
 
         clueText.innerHTML = 'has acertado el número!!!';
