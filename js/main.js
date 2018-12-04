@@ -1,6 +1,20 @@
 'use strict';
 
 
+//generamos el número aleatorio hasta 100
+
+//const max = 100;
+
+function getRandomNumber(max) {
+    return Math.ceil(Math.random() * max);
+}
+
+
+console.log('> ' + getRandomNumber(100));
+
+
+
+
 
 
 // let face = document.querySelector('.face');
