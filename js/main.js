@@ -1,5 +1,14 @@
 'use strict';
 
+let randomNumber = getRandomNumber(100);
+console.log('> ' + randomNumber);
+const button = document.querySelector('.button');
+const usersNumber = document.querySelector('#number');
+const clueText = document.querySelector('.clue__text');
+let content;
+let attemps = document.querySelector('.attemps__number');
+let counter = 0;
+
 
 //generation of a random number from 0 to 100
 
@@ -7,45 +16,36 @@ function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
 
-let randomNumber = getRandomNumber(100);
-console.log('> ' + randomNumber);
 
-const button = document.querySelector('.button');
-const usersNumber = document.querySelector('#number');
-const clueText = document.querySelector('.clue__text');
-
-
-// console.log('button' + button);
-
-// console.log('usersNumber' + usersNumber);
-
-let content;
 
 function showContent(e) {
 
-    console.log('estoy en la función');
 
-    content = usersNumber.value;
-    console.log(content); //showing the user's number
-
+    content = parseInt(usersNumber.value);
+    
     //Comparing the user's number and the random number
 
-    if (parseInt(content) === randomNumber) { //the numbers are equals
+    if (content === randomNumber) { //the numbers are equals
         console.log('has acertado el número!!!');
 
         clueText.innerHTML = 'has acertado el número!!!';
+        counter++;
         
     } else if(content > randomNumber){
 
         console.log('demasiado alto');
         clueText.innerHTML = 'Demasiado alto';
+        counter++;
 
     } else if (content < randomNumber) {
 
         console.log('demasiado bajo');
         clueText.innerHTML = 'Demasiado bajo';
+        counter++;
 
     }
+
+    attemps.innerHTML = counter;
 
 }
 
